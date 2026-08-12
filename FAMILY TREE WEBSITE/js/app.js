@@ -20,6 +20,7 @@ const memberForm = document.getElementById("member-form");
 const memberIdInput = document.getElementById("member-id");
 const memberNameInput = document.getElementById("member-name");
 const memberDobInput = document.getElementById("member-dob");
+memberDobInput.max = new Date().toISOString().split("T")[0];
 const memberGenderInput = document.getElementById("member-gender");
 const memberRelationshipInput =
     document.getElementById("member-relationship");
@@ -280,6 +281,13 @@ memberForm.addEventListener(
     async function (event) {
 
         event.preventDefault();
+
+        const today = new Date().toISOString().split("T")[0];
+
+        if (memberDobInput.value > today) {
+            alert("Date of birth cannot be in the future.");
+            return;
+        }
 
         const id =
             memberIdInput.value;
