@@ -184,6 +184,7 @@ Feel free to fork the repository and submit a pull request.
 
 This project is intended for learning, practice, and portfolio purposes.
 
----
+---<img width="1920" height="3497" alt="screencapture-127-0-0-1-5500-index-html-2026-08-12-11_29_48" src="https://github.com/user-attachments/assets/6c5a475a-5e85-4e42-9598-bd64bc14f9e0" />
+
 
 ⭐ If you find this project useful, consider giving the repository a star!
