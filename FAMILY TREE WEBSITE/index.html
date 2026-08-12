@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FamilyTree | Build Your Family Story</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         HEADER / NAVBAR
+    ========================================= -->
+    <header class="site-header">
+        <nav class="navbar container">
+
+            <a href="#home" class="logo">
+                FamilyTree
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#family-tree">My Tree</a></li>
+                <li><a href="#members">Members</a></li>
+            </ul>
+
+            <button class="btn btn-primary add-member-btn">
+                + Add Member
+            </button>
+
+        </nav>
+    </header>
+
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+    <main>
+
+        <!-- ====================================
+             HERO SECTION
+        ===================================== -->
+        <section class="hero" id="home">
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <span class="hero-badge">
+                        Your Family. Your Story.
+                    </span>
+
+                    <h1>
+                        Build & Preserve Your Family Tree
+                    </h1>
+
+                    <p>
+                        Discover, organize, and preserve your family's story
+                        in one beautiful and interactive family tree.
+                    </p>
+
+                    <button class="btn btn-primary build-tree-btn">
+                        Build My Tree
+                    </button>
+
+                </div>
+
+                <div class="hero-image">
+                    <!-- Family tree illustration will go here -->
+                    <div class="hero-placeholder">
+                        Family Tree Preview
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             FAMILY STATS
+        ===================================== -->
+        <section class="family-stats">
+
+            <div class="container stats-container">
+
+                <div class="stat-card">
+                    <h3 id="total-members">0</h3>
+                    <p>Total Members</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="total-generations">0</h3>
+                    <p>Generations</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="total-branches">0</h3>
+                    <p>Family Branches</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="oldest-generation">--</h3>
+                    <p>Oldest Generation</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             MY FAMILY TREE
+        ===================================== -->
+        <section class="family-tree-section" id="family-tree">
+
+            <div class="container">
+
+                <!-- Section Header -->
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-label">Family Connections</span>
+                        <h2>My Family Tree</h2>
+                    </div>
+
+                    <div class="tree-actions">
+
+                        <input
+                            type="search"
+                            id="tree-search"
+                            placeholder="Search family member..."
+                            aria-label="Search family member"
+                        >
+
+                        <button class="btn btn-primary add-member-btn">
+                            + Add Member
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Interactive Family Tree -->
+                <div class="tree-wrapper" id="tree-container">
+
+                    <!-- Grandparents -->
+                    <div class="tree-generation grandparents">
+
+                        <h3 class="generation-title">
+                            Grandparents
+                        </h3>
+
+                        <div class="generation-members">
+                            <!-- Generated dynamically with JavaScript -->
+                        </div>
+
+                    </div>
+
+
+                    <!-- Parents -->
+                    <div class="tree-generation parents">
+
+                        <h3 class="generation-title">
+                            Parents
+                        </h3>
+
+                        <div class="generation-members">
+                            <!-- Generated dynamically with JavaScript -->
+                        </div>
+
+                    </div>
+
+
+                    <!-- Children -->
+                    <div class="tree-generation children">
+
+                        <h3 class="generation-title">
+                            Children
+                        </h3>
+
+                        <div class="generation-members">
+                            <!-- Generated dynamically with JavaScript -->
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             FAMILY MEMBERS
+        ===================================== -->
+        <section class="family-members-section" id="members">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-label">Our Family</span>
+                        <h2>Family Members</h2>
+                    </div>
+
+                    <button class="btn btn-primary add-member-btn">
+                        + Add Member
+                    </button>
+
+                </div>
+
+
+                <!-- Member Filters -->
+                <div class="member-filters">
+
+                    <input
+                        type="search"
+                        id="member-search"
+                        placeholder="Search members..."
+                        aria-label="Search members"
+                    >
+
+                    <select id="relationship-filter">
+                        <option value="all">
+                            All Relationships
+                        </option>
+                        <option value="grandfather">Grandfather</option>
+                        <option value="grandmother">Grandmother</option>
+                        <option value="father">Father</option>
+                        <option value="mother">Mother</option>
+                        <option value="son">Son</option>
+                        <option value="daughter">Daughter</option>
+                        <option value="brother">Brother</option>
+                        <option value="sister">Sister</option>
+                        <option value="spouse">Spouse</option>
+                    </select>
+
+                </div>
+
+
+                <!-- Member Cards -->
+                <div class="members-grid" id="members-container">
+
+                    <!-- Member cards generated by JavaScript -->
+
+                    <div class="empty-members-message">
+                        <h3>No family members yet</h3>
+                        <p>
+                            Start building your family tree by adding
+                            your first family member.
+                        </p>
+
+                        <button class="btn btn-primary add-member-btn">
+                            + Add First Member
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         ADD / EDIT MEMBER MODAL
+    ========================================= -->
+    <div class="modal" id="member-modal">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                id="close-member-modal"
+                aria-label="Close modal"
+            >
+                &times;
+            </button>
+
+            <div class="modal-header">
+                <h2 id="member-modal-title">Add Family Member</h2>
+                <p>Add their details to your family tree.</p>
+            </div>
+
+
+            <form id="member-form">
+
+                <!-- Hidden ID used when editing -->
+                <input type="hidden" id="member-id">
+
+
+                <div class="form-group">
+                    <label for="member-image">
+                        Profile Image
+                    </label>
+
+                    <input
+                        type="file"
+                        id="member-image"
+                        accept="image/*"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="member-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="member-name"
+                        placeholder="Enter full name"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="member-dob">
+                        Date of Birth
+                    </label>
+
+                    <input
+                        type="date"
+                        id="member-dob"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="member-gender">
+                        Gender
+                    </label>
+
+                    <select id="member-gender" required>
+                        <option value="">Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="member-relationship">
+                        Relationship
+                    </label>
+
+                    <select id="member-relationship" required>
+
+                        <option value="">
+                            Select relationship
+                        </option>
+
+                        <option value="grandfather">Grandfather</option>
+                        <option value="grandmother">Grandmother</option>
+                        <option value="father">Father</option>
+                        <option value="mother">Mother</option>
+                        <option value="son">Son</option>
+                        <option value="daughter">Daughter</option>
+                        <option value="brother">Brother</option>
+                        <option value="sister">Sister</option>
+                        <option value="spouse">Spouse</option>
+
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="related-to">
+                        Related To
+                    </label>
+
+                    <select id="related-to">
+                        <option value="">
+                            Select family member
+                        </option>
+
+                        <!-- Options generated by JavaScript -->
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="member-bio">
+                        Short Bio
+                    </label>
+
+                    <textarea
+                        id="member-bio"
+                        rows="4"
+                        placeholder="Write something about this family member..."
+                    ></textarea>
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        id="cancel-member"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Save Member
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================
+         MEMBER DETAILS MODAL
+    ========================================= -->
+    <div class="modal" id="details-modal">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content member-details">
+
+            <button
+                class="modal-close"
+                id="close-details-modal"
+                aria-label="Close member details"
+            >
+                &times;
+            </button>
+
+
+            <div class="details-profile">
+
+                <div class="details-image">
+                    <img
+                        id="details-member-image"
+                        src=""
+                        alt="Family member"
+                    >
+                </div>
+
+                <h2 id="details-member-name">
+                    Member Name
+                </h2>
+
+                <span id="details-member-relationship">
+                    Relationship
+                </span>
+
+            </div>
+
+
+            <div class="details-information">
+
+                <div class="detail-item">
+                    <strong>Date of Birth</strong>
+                    <span id="details-member-dob">--</span>
+                </div>
+
+                <div class="detail-item">
+                    <strong>Age</strong>
+                    <span id="details-member-age">--</span>
+                </div>
+
+                <div class="detail-item">
+                    <strong>Gender</strong>
+                    <span id="details-member-gender">--</span>
+                </div>
+
+                <div class="detail-item">
+                    <strong>Bio</strong>
+                    <p id="details-member-bio">
+                        No biography available.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="form-actions">
+
+                <button
+                    class="btn btn-secondary"
+                    id="details-close-btn"
+                >
+                    Close
+                </button>
+
+                <button
+                    class="btn btn-primary"
+                    id="details-edit-btn"
+                >
+                    Edit Profile
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+    <footer class="site-footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    FamilyTree
+                </a>
+
+                <p>
+                    Preserve your family's history and keep
+                    every generation connected.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#family-tree">My Tree</a>
+                <a href="#members">Members</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    &copy; <span id="current-year"></span>
+                    FamilyTree. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
