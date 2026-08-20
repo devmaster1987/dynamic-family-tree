@@ -13,7 +13,7 @@
 
 <p align="center">
   <a href="#-features">Features</a> •
-  <a href="#-live-demo">Live Demo</a> •
+  <a href="https://devmaster1987.github.io/dynamic-family-tree/">Live Demo</a> •
   <a href="#-technologies">Technologies</a> •
   <a href="#-getting-started">Getting Started</a> •
   <a href="#-documentation">Documentation</a>
