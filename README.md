@@ -1,190 +1,131 @@
-# 🌳 Dynamic Family Tree
+<p align="center">
+  <img src="assets/image.png" alt="Dynamic Family Tree Logo" width="150" height="auto">
+    <br />
+</p>
 
-A modern, responsive, and interactive **Family Tree web application** built using **HTML, CSS, and Vanilla JavaScript**.
 
-The application allows users to create and manage family members, organize relationships, explore generations, search and filter members, and preserve family data directly in the browser using LocalStorage.
+
+<p align="center">
+  <strong>A Modern, Interactive Family Tree Web Application</strong>
+  <br />
+  Built with HTML, CSS, and Vanilla JavaScript
+</p>
+
+<p align="center">
+  <a href="#-features">Features</a> •
+  <a href="#-live-demo">Live Demo</a> •
+  <a href="#-technologies">Technologies</a> •
+  <a href="#-getting-started">Getting Started</a> •
+  <a href="#-documentation">Documentation</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version">
+  <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/status-stable-brightgreen.svg" alt="Status">
+</p>
+
+---
+
+## 📖 Overview
+
+**Dynamic Family Tree** is a fully responsive, client-side web application that enables users to:
+
+- 👨‍👩‍👧‍👦 **Create** and **manage** family members
+- 🔗 **Organize** relationships across multiple generations
+- 🌳 **Visualize** interactive family trees
+- 🔍 **Search** and **filter** family members
+- 💾 **Preserve** data locally using **LocalStorage**
+
+Perfect for genealogy enthusiasts, family historians, or anyone interested in documenting their family lineage. No backend or database required – everything runs directly in your browser.
+
+---
 
 ## ✨ Features
 
-* 👨‍👩‍👧‍👦 Add family members
-* ✏️ Edit existing members
-* 🗑️ Delete family members
-* 👤 View detailed member profiles
-* 🌳 Interactive family tree visualization
-* 🔗 Define relationships between family members
-* 🔍 Search family members
-* 🎯 Filter members by relationship
-* 📊 Dynamic family statistics
-* 🎂 Automatic age calculation
-* 🖼️ Upload profile images
-* 💾 LocalStorage data persistence
-* 📱 Fully responsive design
-* 💻 No backend or database required
+### Core Functionality
 
-## 🌿 Supported Relationships
+| Feature | Description |
+|---------|-------------|
+| ➕ **Add Members** | Add family members with name, photo, DOB, gender, and biography |
+| ✏️ **Edit Members** | Update existing member details effortlessly |
+| 🗑️ **Delete Members** | Remove members with confirmation to prevent accidental deletion |
+| 👤 **Profile View** | View detailed member profiles with all information |
+| 🌳 **Tree View** | Interactive visualization of family relationships |
+| 🔗 **Relationships** | Define relationships like Father, Mother, Spouse, Siblings, etc. |
+| 🔍 **Search** | Fast member search by name or relationship |
+| 🎯 **Filter** | Filter members by relationship type |
+| 📊 **Statistics** | View family stats: total members, generations, branches, oldest member |
+| 📸 **Photo Upload** | Upload profile images using FileReader API |
+| 💾 **Auto-Save** | All data persists automatically in LocalStorage |
 
-The application currently supports:
+### Supported Relationships
 
-* Grandfather
-* Grandmother
-* Father
-* Mother
-* Son
-* Daughter
-* Brother
-* Sister
-* Spouse
+### Data Management
 
-Members can also be connected using the **Related To** field.
+- ✅ **No Database Required** – Everything stored in browser
+- ✅ **Persistent Storage** – Data survives page refreshes
+- ✅ **Instant Updates** – Changes reflect immediately
+- ✅ **Export Ready** – Data can be extracted for backup
 
-## 📊 Dynamic Statistics
+---
 
-The dashboard automatically updates information such as:
+## 📊 Dynamic Statistics Dashboard
 
-* Total family members
-* Total generations
-* Family branches
-* Oldest member
+The application automatically calculates and displays:
 
-Statistics update whenever family members are added, edited, or removed.
+| Statistic | Description |
+|-----------|-------------|
+| 👨‍👩‍👧‍👦 **Total Members** | Complete family count |
+| 📈 **Generations** | Number of family generations |
+| 🌿 **Branches** | Distinct family branches |
+| 🧓 **Oldest Member** | Age of the eldest family member |
 
-## 🛠️ Technologies Used
+> **Note:** Statistics update in real-time when members are added, edited, or removed.
 
-* **HTML5** — Semantic page structure
-* **CSS3** — Layout, responsive design, animations, and family tree styling
-* **Vanilla JavaScript** — Application logic and DOM manipulation
-* **LocalStorage** — Browser-based data persistence
-* **FileReader API** — Profile image handling
+---
 
-No frameworks or external JavaScript libraries are required.
+## 🛠️ Technologies
+
+### Frontend Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **HTML5** | Semantic, accessible page structure |
+| **CSS3** | Responsive layouts, animations, tree styling |
+| **Vanilla JavaScript** | Application logic, DOM manipulation, events |
+| **LocalStorage API** | Client-side data persistence |
+| **FileReader API** | Profile image upload and preview |
+
+### Key Features
+
+- ✅ **No Frameworks** – Pure vanilla JavaScript
+- ✅ **No Dependencies** – Zero external libraries
+- ✅ **Lightweight** – Fast load times
+- ✅ **Cross-Browser** – Works on all modern browsers
+
+---
 
 ## 📁 Project Structure
 
-```text id="zzsmgh"
+```text
 dynamic-family-tree/
 │
-├── index.html
+├── index.html              # Main application page
 │
 ├── css/
-│   └── style.css
+│   └── style.css           # Complete application styles
 │
 ├── js/
-│   └── app.js
+│   └── app.js              # All application logic
 │
 ├── assets/
-│   └── images/
+│   ├── images/             # Profile images and icons
+│   ├── project-preview.png # Project screenshot
+│   └── logo.png            # Brand logo
 │
-└── README.md
-```
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
-
-```bash id="fz91wy"
-git clone https://github.com/YOUR-USERNAME/dynamic-family-tree.git
-```
-
-### 2. Open the project
-
-```bash id="woxc38"
-cd dynamic-family-tree
-```
-
-### 3. Run the application
-
-Open `index.html` directly in your browser.
-
-For development, you can also use the **Live Server** extension in Visual Studio Code.
-
-No installation, package manager, or build process is required.
-
-## 💡 How It Works
-
-Click **+ Add Member** and enter the family member's information.
-
-You can provide:
-
-* Full name
-* Profile image
-* Date of birth
-* Gender
-* Relationship
-* Related family member
-* Short biography
-
-After saving, JavaScript dynamically updates the members directory, family tree, and statistics.
-
-## 💾 Data Storage
-
-Family data is stored using the browser's **LocalStorage**.
-
-This means:
-
-* Data remains available after refreshing the page.
-* No database is required.
-* Data is stored locally in the current browser.
-* Clearing browser storage will remove the saved family data.
-
-## 🔎 Search & Filtering
-
-Users can quickly find family members using the built-in search functionality.
-
-The members directory can also be filtered by relationship, making larger family trees easier to navigate.
-
-## 📱 Responsive Design
-
-Dynamic Family Tree is designed to work across:
-
-* Desktop computers
-* Laptops
-* Tablets
-* Mobile devices
-
-The interface automatically adapts to different screen sizes.
-
-## 🎯 Project Purpose
-
-This project was created to practice and demonstrate core front-end development concepts, including:
-
-* DOM manipulation
-* JavaScript events
-* CRUD operations
-* Arrays and objects
-* Form handling
-* Dynamic rendering
-* Search and filtering
-* Browser storage
-* FileReader API
-* Responsive CSS
-* UI/UX design
-
-## 🔮 Future Improvements
-
-Possible future improvements include:
-
-* Drag-and-drop family tree
-* Advanced genealogy relationships
-* Zoom and pan controls
-* Import/export family data
-* JSON backup and restore
-* Download family tree as PDF
-* Dark mode
-* Multiple family trees
-* Backend/database integration
-* User authentication
-
-## 🤝 Contributing
-
-Contributions, suggestions, and improvements are welcome.
-
-Feel free to fork the repository and submit a pull request.
-
-## 📄 License
-
-This project is intended for learning, practice, and portfolio purposes.
-
----<img width="1920" height="3497" alt="screencapture-127-0-0-1-5500-index-html-2026-08-12-11_29_48" src="assets/project-preview.png" />
-
-
-⭐ If you find this project useful, consider giving the repository a star!
+├── README.md               # Project documentation (this file)
+└── LICENSE                 # MIT License
