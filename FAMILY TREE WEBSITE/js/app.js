@@ -443,6 +443,45 @@ function updateRelatedToOptions(
 
 
 // ==========================================
+// SORT MEMBERS
+// ==========================================
+
+function sortMembers(list, sortBy) {
+
+    const sortedMembers = [...list];
+
+    switch (sortBy) {
+
+        case "name-asc":
+            return sortedMembers.sort((a, b) =>
+                a.name.localeCompare(b.name)
+            );
+
+        case "name-dsc":
+            return sortedMembers.sort((a, b) =>
+                b.name.localeCompare(a.name)
+            );
+
+        case "age-oldest":
+            return sortedMembers.sort((a, b) =>
+                new Date(a.dob) - new Date(b.dob)
+            );
+
+        case "age-youngest":
+            return sortedMembers.sort((a, b) =>
+                new Date(b.dob) - new Date(a.dob)
+            );
+
+        case "recently-added":
+            return sortedMembers.sort(
+                (a, b) => Number(b.id) - Number(a.id)
+            );
+
+        default:
+            return sortedMembers;
+    }
+}
+// ==========================================
 // RENDER MEMBERS
 // ==========================================
 
@@ -491,8 +530,13 @@ function renderMembers(
         return;
     }
 
+    const dropdown = document.getElementById("family-sort");
+    const sortedMembers = sortMembers(
+        list,
+        dropdown.value
+    );
 
-    list.forEach(member => {
+    sortedMembers.forEach(member => {
 
         const card =
             document.createElement(
@@ -1240,6 +1284,12 @@ relationshipFilter.addEventListener(
     filterMembers
 );
 
+const sortDropdown = document.getElementById("family-sort");
+
+sortDropdown.addEventListener(
+    "change",
+    filterMembers
+);
 
 // ==========================================
 // SEARCH TREE
