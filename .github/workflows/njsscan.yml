@@ -1,28 +1,29 @@
 name: njsscan Security Scan
 
-
 on:
-
   push:
-
     branches:
       - main
 
   pull_request:
+    branches:
+      - main
 
 
 jobs:
-
   njsscan:
 
     runs-on: ubuntu-latest
 
-
     steps:
 
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
 
+      - name: Install njsscan
+        run: pip install njsscan
+
+
       - name: Run njsscan
-        uses: ajinabraham/njsscan-action@v1
+        run: njsscan --directory .
