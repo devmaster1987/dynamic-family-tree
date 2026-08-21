@@ -189,5 +189,3 @@ This project is intended for learning, practice, and portfolio purposes.
 
 ⭐ If you find this project useful, consider giving the repository a star!
 
-
-<<<<<<<<<<<<<<<<<<<<<< THANKS FOR YOUR CONTRIBUTIONS  >>>>>>>>>>>>>>>>>>>>>> 
