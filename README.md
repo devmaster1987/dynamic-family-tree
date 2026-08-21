@@ -156,7 +156,7 @@ This project was created to practice and demonstrate core front-end development 
 * Search and filtering
 * Browser storage
 * FileReader API
-* Responsive CSS
+* Responsive CSS all devices
 * UI/UX design
 
 ## 🔮 Future Improvements
@@ -172,7 +172,8 @@ Possible future improvements include:
 * Dark mode
 * Multiple family trees
 * Backend/database integration
-* User authentication
+* User authentications
+
 
 ## 🤝 Contributing
 
